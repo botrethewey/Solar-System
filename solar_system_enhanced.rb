@@ -37,25 +37,25 @@ class Planet
   end
 end
 
-#declares the Solar_System
-class Solar_System
+#declares the SolarSystem
+class SolarSystem
   #attribute accessor
   attr_accessor :planets
   #attribute reader
   attr_reader :formation_year
 
-  #constructor method for a Solar_System object
+  #constructor method for a SolarSystem object
   def initialize(formation_year)
     @formation_year = formation_year
     @planets = []
   end
 
-  #method that adds a single Planet object to the Solar_System
+  #method that adds a single Planet object to the SolarSystem
   def add_planet(planet)
     @planets.push(planet)
   end
 
-  #method that adds an array of Planet objects to the Solar_System
+  #method that adds an array of Planet objects to the SolarSystem
   def add_planets(planets)
     planets.each do |planet|
       @planets.push(planet)
@@ -160,8 +160,8 @@ planets = [
   )
 ]
 
-#create new Solar_System object and store it to the variable, sol
-sol = Solar_System.new(4600000000)
+#create new SolarSystem object and store it to the variable, sol
+sol = SolarSystem.new(4600000000)
 
 #adds an array of Planet objects to sol
 sol.add_planets(planets)
@@ -202,7 +202,7 @@ def valid_integer(input)
   end
 end
 
-#method that handles manual addition of a new planet to the Solar_System object
+#method that handles manual addition of a new planet to the SolarSystem object
 def manual_add_planet(sol)
   puts "What is the name of the planet? "
   name = valid_name(gets.chomp)
@@ -275,11 +275,11 @@ title = "╔═╗┌─┐┬  ┌─┐┬─┐  ╔═╗┬ ┬┌─┐┌
 puts "\n#{title}"
 puts "Welcome to my Solar System Explorer program!"
 
-#prints the current list of planets within the Solar_System object
+#prints the current list of planets within the SolarSystem object
 puts "\nCurrently there are #{sol.planets.length} planets in this solar system."
 sol.planets.each_with_index { |planet, index| puts "#{index + 1}. #{planet.name.capitalize}" }
 
-#gives user an option to add more planets to the Solar_System object
+#gives user an option to add more planets to the SolarSystem object
 while true
   puts "\nWould you like to add a new planet? (yes/no)"
   print "Your Answer: "
