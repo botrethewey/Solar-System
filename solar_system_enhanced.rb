@@ -1,3 +1,7 @@
+#this is for git excercise!!!!!!! added a comment to make a change on rb file.
+
+
+
 #declares the Planet Class
 class Planet
   #attribute readers
